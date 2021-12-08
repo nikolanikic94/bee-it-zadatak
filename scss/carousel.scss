@@ -1,0 +1,134 @@
+.carousel {
+    position: relative;
+    height: 550px;
+    width: 100%;
+    .carousel-layout {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        max-width: 1500px;
+        height: 100%;
+        .carousel-heading {
+            position: relative;
+            top: 50%;
+            max-width: 500px;
+            left: 120px;
+            transform: translateY(-50%);
+            color: $light-text-color;
+            h1 {
+                font-size: 3.125rem;
+                line-height: 60px;
+            }
+            h5 {
+                font-size: 1.5rem;
+                font-weight: 400;
+                margin-bottom: 35px;
+                sup {
+                    font-size: 1rem;
+                    position: relative;
+                    top: 5px;
+                }
+            }
+            button {
+                padding: .825em 2.065em;
+                font-size: 1.25rem;
+                border: none;
+                background-color: $primary-color;
+                color: $light-text-color;
+                font-weight: 700;
+                outline: none;
+                transition: all .2s ease-in;
+                &:hover {
+                    background-color: $secondary-color;
+                }
+            }
+        }
+        .carousel-button {
+            border: 1px solid rgba(255, 255, 255, 0.301);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: transparent;
+            &:focus {
+                outline: none;
+            }
+            img {
+                width: 23px;
+                height: 16px;
+            }
+            &.btn-left {
+                position: absolute;
+                top: 50%;
+                right: 70px;
+                transform: translateY(-50%);
+            }
+            &.btn-right {
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+            }
+        }
+    }
+    .carousel-track-container {
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+        z-index: -1;
+        .carousel-track {
+            list-style: none;
+            position: relative;
+            height: 100%;
+            transition: transform 250ms ease-in;
+            .carousel-slide {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                width: 100%;
+                
+                .carousel-image {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .carousel {
+        height: 450px;
+        .carousel-layout {
+            .carousel-heading {
+                left: 0;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .carousel {
+        height: 377px;
+        .carousel-layout {
+            .carousel-heading {
+                button {
+                    font-size: 1.5rem;
+                }
+            }
+            .carousel-button {
+                &.btn-left {
+                    top: 85%;
+                }
+                &.btn-right {
+                    top: 85%;
+                }
+            }
+        }
+    }
+}

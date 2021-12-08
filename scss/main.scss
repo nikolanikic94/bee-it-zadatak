@@ -1,0 +1,824 @@
+@import 'variables.scss';
+@import 'carousel.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    font-family: $main-font;
+}
+
+body {
+    min-width: 640px;
+}
+
+// HEADER
+
+header {
+    width: 100%;
+    background-color: #fff;
+    margin: 0 auto;
+    .header-content {
+        margin: 0 auto;
+        max-width: 1500px;
+        width: 90%;
+        padding: 1em 0;
+        display: flex;
+        align-items: center;
+        .header-links {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            nav {
+                ul {
+                    list-style: none;
+                    li {
+                        display: inline;
+                        font-size: 1.4rem;
+                        margin-left: 2.4em;
+                        a {
+                            text-decoration: none;
+                            color: $primary-color;
+                            display: inline-block;
+                            transition: all .15s ease-in-out;
+                            &:hover {
+                                color: $secondary-color;
+                            }
+                            &:active {
+                                transform: scale(.9);
+                            }
+                        }
+                    }
+                }
+            }
+            .menu {
+                display: flex;
+                align-items: center;
+                a {
+                    text-decoration: none;
+                    color: $primary-color;
+                    font-size: 1rem;
+                }
+                .login {
+                    padding-right: 1.3em;
+                }
+                .language {
+                    padding-left: 1.3em;
+                }
+            }
+        }
+    }
+}
+
+// UPS SECTION
+
+.ups {
+    background-color: #fff;
+    width: 100%;
+    margin: 0 auto;
+    .ups-content {
+        max-width: 1500px;
+        margin: 0 auto;
+        width: 75%;
+        padding: 3.5em 0;
+        h4 {
+            text-align: center;
+            font-size: 1rem;
+            text-transform: uppercase;
+            color: #7e7e7e;
+            font-weight: 300;
+        }
+        h2 {
+            text-align: center;
+            font-size: 3.125rem;
+            color: $primary-color;
+        }
+        .ups-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-content: space-between;
+            .ups-card {
+                width:50%;
+                display: flex;
+                margin-top: 70px;
+                .ups-card-image {
+                    padding-right: 2em;
+                    .ups-card-image-circle {
+                        position: relative;
+                    }
+                    .ups-card-image-position {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+                .ups-card-text {
+                    margin-right: 50px;
+                    h4 {
+                        text-align: left;
+                        color: $primary-color;
+                        font-size: 1.5rem;
+                        font-weight: 500;
+                    }
+                    p {
+                        font-size: 1.125rem;
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// OFFERS SECTION
+
+.offers {
+    width: 100%;
+    background-color: $primary-color;
+    margin: 0 auto;
+    .offers-content {
+        max-width: 1500px;
+        width: 75%;
+        margin: 0 auto;
+        padding-top: 6.25em;
+        h3 {
+            font-size: 1.25rem;
+            color: $light-text-color;
+            font-weight: 300;
+        }
+        .offers-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 1.75em;
+            .offers-card {
+                width: 240px;
+                height: 320px;
+                background-color: #fff;
+                margin-bottom: 1em;
+                .offers-card-image {
+                    width: 100%;
+                    img {
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+                h5 {
+                    margin: 20px 0 25px 20px;
+                    font-size: 1.5rem;
+                    color: $secondary-color;
+                    line-height: 1.5rem;
+                    span {
+                        font-size: 1.25rem;
+                        font-weight: 500;
+                    }
+                }
+                button {
+                    margin-left: 20px;
+                    font-size: 1.5rem;
+                    border: none;
+                    background-color: transparent;
+                    font-weight: 700;
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+}
+
+// INSPIRATION SECTION
+
+.inspiration {
+    width: 100%;
+    background-color: #fff;
+    margin: 0 auto;
+    .inspiration-content {
+        max-width: 1500px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 5.625em 0 3.125em 0;
+        h4 {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 500;
+            color: $primary-color;
+            a {
+                text-decoration: none;
+                font-weight: 700;
+                border-bottom: 4px solid $primary-color;
+                border-image: url(../img/_INSPIRATION/Dashed.png) 1 round;
+            }
+        }
+    }
+}
+
+// SERVICES SECTION
+
+.services {
+    width: 100%;
+    background-color: $secondary-color;
+    margin: 0 auto;
+    .services-content {
+        max-width: 1500px;
+        width: 75%;
+        height: 100%;
+        margin: 0 auto;
+        padding: 5.625em 0;
+        .services-intro {
+            width: 100%;
+            text-align: center;
+            margin: 0 auto;
+            h5 {
+                font-size: 1rem;
+                text-transform: uppercase;
+                color: $light-text-color;
+                font-weight: 500;
+            }
+            h2 {
+                font-size: 3.125rem;
+                color: $tertiary-color;
+            }
+            p {
+                font-size: 1.25rem;
+                color: $light-text-color;
+                margin: 30px 0 60px 0;
+                padding: 0 20%;
+            }
+            .all-services {
+                text-align: right;
+                a {
+                    font-size: 1.25rem;
+                    text-decoration: none;
+                    color: $tertiary-color;
+                    border-bottom: 1px dashed $tertiary-color;
+                    border-image: url(../img/_SERVICES/striped.png) 1 round;
+                }
+            }
+            
+        }
+        .services-tabs {
+            margin-top: 25px;
+            .tab-links {
+                display: flex;
+                .tab-link {
+                    background-color: #f0f0f0;
+                    color: #878787;
+                    border: none;
+                    outline: none;
+                    cursor: pointer;
+                    padding: 14px 16px;
+                    font-size: 2rem;
+                    width: 33.33%;
+                    &.active {
+                        border-top: 6px solid $tertiary-color;
+                    }
+            }
+            
+            }
+            .tab-content {
+                color: black;
+                display: none;
+                justify-content: space-between;
+                align-items: center;
+                padding: 40px 100px 40px 60px;
+                height: 100%;
+                h3 {
+                    display: none;
+                }
+                ul {
+                    list-style: none;
+                    li {
+                        display: flex;
+                        align-items: center;
+                        font-size: 1.25rem;
+                        margin-bottom: 15px;
+                        img {
+                            margin-right: 15px;
+                        }
+                    }
+                }
+            }  
+        }
+    }
+}
+
+#Regular,
+#Plus,
+#Premium {background-color: #fff;}
+
+
+// FOOTER
+
+footer {
+    width: 100%;
+    .top-bar {
+        width: 100%;
+        margin: 0 auto;
+        background-color: $primary-color;
+        .top-bar-content {
+            max-width: 1500px;
+            width: 90%;
+            margin: 0 auto;    
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 3em 0;
+            form {
+                display: flex;
+                h3 {
+                    color: $light-text-color;
+                    font-size: 1.5rem;
+                    font-weight: 300;
+                    margin-right: 85px;
+                    span {
+                        display: none;
+                    }
+                }
+                #email {
+                    border: none;
+                    border-bottom: 1px solid #fff;
+                    background-color: transparent;
+                    width: 340px;
+                    outline: none;
+                    &::placeholder {
+                        font-size: 1.125rem;
+                    }
+                }
+                button {
+                    border: none;
+                    border-bottom: 1px solid #fff;
+                    outline: none;
+                    background-color: transparent;
+                    color: $light-text-color;
+                    font-size: 1.125rem;
+                    font-weight: 300;
+                    padding-right: 5px;
+                    img {
+                        position: relative;
+                        top: 2px;
+                    }
+                }
+            }
+            .social {
+                display: flex;
+                align-items: center;
+                h3 {
+                    color: $light-text-color;
+                    font-size: 1.5rem;
+                    font-weight: 300;
+                }
+                .social-icons {
+                    display: flex;
+                    margin-left: 1em;
+                    .social-icon {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 60px;
+                        height: 60px;
+                        border-radius: 50%;
+                        border: 1px solid rgba(255, 255, 255, 0.5);
+                        margin-left: 10px;
+                        img {
+                            transition: all .2s ease-in;
+                            &:hover {
+                                transform: scale(1.2);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .bottom-bar {
+        width: 100%;
+        margin: 0 auto;
+        background-color: #fff;
+        border-bottom: 10px solid $tertiary-color;
+        .bottom-bar-content {
+            max-width: 1500px;
+            width: 90%;
+            margin: 0 auto;    
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 3em 0;
+            .payments {
+                display: flex;
+                .payment {
+                    margin-right: 1em;
+                    img {
+                        -webkit-filter: grayscale(100%);
+                        filter: grayscale(100%);
+                    }
+                }
+            }
+            .footer-links {
+                a {
+                    font-size: 1rem;
+                    text-decoration: none;
+                    color: #666666;
+                    margin-left: 18px;
+                }
+            }
+        }
+    }
+}
+
+// MEDIA QUERIES
+
+@media only screen and (max-width: 1400px) {
+    .offers {
+        .offers-content {
+            width: 95%;
+        }
+    }
+}
+
+@media only screen and (max-width: 1240px) {
+    .ups {
+        .ups-content {
+            width: 95%;
+            h4 {
+                font-size: 0.875rem;
+            }
+            h2 {
+                font-size: 2rem;
+            }
+            .ups-cards {
+                .ups-card {
+                    .ups-card-text {
+                        h4 {
+                            font-size: 1.25rem;
+                        }
+                        p {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .services {
+        .services-content {
+            width: 85%;
+        }
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .offers {
+        .offers-content {
+            .offers-cards {
+                .offers-card {
+                    width: 354px;
+                    height: 363px;
+                    h5 {
+                        margin: 10px 0 10px 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    .services {
+        .services-content {
+            width: 95%;
+            padding: 3em 0;
+            .services-intro {
+                h5 {
+                    font-size: 0.875rem;
+                }
+                h2 {
+                    font-size: 2rem;
+                }
+                p {
+                    font-size: 1rem;
+                    padding: 0 10%;
+                }
+            }
+            .services-tabs {
+                .tab-links {
+                    .tab-link {
+                        font-size: 1.375rem;
+                    }
+                }
+                .tab-content {
+                    ul {
+                        li {
+                            font-size: 0.875rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        .top-bar {
+            .top-bar-content {
+                flex-direction: column;
+                padding: 1.5em 0;
+                form {
+                    flex-direction: column;
+                    text-align: center;
+                    h3 {
+                        font-size: 1.75rem;
+                        line-height: 56px;
+                        span {
+                            display: inline;
+                        }
+                    }
+                    #email {
+                        width: 560px;
+                        padding: 5px;
+                        margin: 2em 0 3em 0;
+                        &::placeholder {
+                            font-size: 1.25rem;
+                        }
+                    }
+                    button {
+                        background-color: #fff;
+                        border: none;
+                        font-size: 1.375rem;
+                        color: $primary-color;
+                        font-weight: 700;
+                        width: 301px;
+                        height: 50px;
+                        margin: 0 auto;
+                        img {
+                            display: none;
+                        }
+                    }
+                }
+                .social {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+        .header-content {
+            width: 95%;
+            .header-links {
+                nav {
+                    ul {
+                        li {
+                            font-size: 1.25rem;
+                        }
+                    }
+                }
+                .menu {
+                    a {
+                        font-size: 0.875rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .inspiration {
+        .inspiration-content {
+            h4 {
+                font-size: 1.625rem;
+            }
+        }
+    }
+
+    .services {
+        .services-content {
+            width: 95%;
+        }
+    }
+
+    footer {
+        .bottom-bar {
+            .bottom-bar-content {
+                flex-direction: column;
+                padding: 1em 0;
+                .payments {
+                    margin: 1em 0;
+                    .payment {
+                        margin: 0 1.5em;
+                    }
+                }
+                .footer-links {
+                    a {
+                        margin-right: 18px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    .offers {
+        .offers-content {
+            padding-top: 4.75em;
+            h3 {
+                font-size: 3.94rem;
+                text-align: center;
+                font-weight: 500;
+            }
+            .offers-cards {
+                margin-top: 4.75em;
+                justify-content: center;
+                .offers-card {
+                    width: 560px;
+                    height: 746px;
+                    margin-bottom: 2.8em;
+                    h5 {
+                        margin: 50px 0 70px 40px;
+                        font-size: 3.5rem;
+                        line-height: 3.5rem;
+                        span {
+                            font-size: 3.5rem;
+                        }
+                    }
+                    button {
+                        font-size: 3.5rem;
+                        margin-left: 40px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 750px) {
+    .ups {
+        .ups-content {
+            h4 {
+                font-size: 1.75rem;
+            }
+            h2 {
+                font-size: 3.375rem;
+            }
+            .ups-cards {
+                .ups-card {
+                    width: 100%;
+                    .ups-card-text {
+                        h4 {
+                            font-size: 2.125rem;
+                        }
+                        p {
+                            font-size: 1.625rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .services {
+        .services-content {
+            width: 90%;
+            padding: 3em 0;
+            .services-intro {
+                h5 {
+                    font-size: 1.75rem;
+                }
+                h2 {
+                    font-size: 4rem;
+                    line-height: 3.625rem;
+                    margin: 2rem;
+                }
+                p {
+                    font-size: 1.75rem;
+                    padding: 0 10%;
+                }
+                .all-services {
+                    text-align: center;
+                    padding-bottom: 3rem;
+                    a {
+                        font-size: 2.25rem;
+                        
+                    }
+                }
+            }
+            .services-tabs {
+                .tab-links {
+                    display: none;
+                    .tab-link {
+                        font-size: 1.375rem;
+                    }
+                }
+                .tab-content {
+                    display: block !important;
+                    text-align: center;
+                    margin-bottom: 5rem;
+                    border-top: 12px solid $primary-color;
+                    h3 {
+                        display: block;
+                        font-size: 2.25rem;
+                        margin: 1em 0 2em 0;
+                        color: $primary-color;
+                    }
+                    ul {
+                        li {
+                            font-size: 1.75rem;
+                            justify-content: flex-start;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+@media only screen and (max-width: 640px) {
+    header {
+        .header-content {
+            width: 90%;
+            .header-links {
+                flex-direction: column-reverse;
+                align-items: flex-end;
+                nav {
+                    ul {
+                        li {
+                            font-size: 1.75rem;
+                            font-weight: 700;
+                        }
+                    }
+                }
+                .menu {
+                    a {
+                        font-size: 1.375rem;
+                        color: #031326;
+                    }
+                    .separator {
+                        height: 20px;
+                    }
+                    .language {
+                        span {
+                            display: none;
+                        }
+                        img {
+                            width: 48px;
+                            height: 24px;
+                            position: relative;
+                            bottom: -5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .inspiration {
+        .inspiration-content {
+            h4 {
+                font-size: 3rem;
+            }
+        }
+    }
+
+    footer {
+        .top-bar {
+            .top-bar-content {
+                padding: 5em 0;
+                form {
+                    h3 {
+                        font-size: 3rem;
+                        margin-right: 0;
+                    }
+                    #email {
+                        height: 50px;
+                        &::placeholder {
+                            font-size: 2.125rem;
+                        }
+                    }
+                    button {
+                        width: 561px;
+                        height: 100px;
+                        font-size: 2.75rem;
+                    }
+                }
+            }
+        }
+        .bottom-bar {
+            .bottom-bar-content {
+                .footer-links {
+                    a {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
